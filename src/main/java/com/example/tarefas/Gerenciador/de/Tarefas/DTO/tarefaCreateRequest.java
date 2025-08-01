@@ -1,14 +1,12 @@
 package com.example.tarefas.Gerenciador.de.Tarefas.DTO;
 
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.validation.constraints.NotBlank;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class tarefaCreateRequest {
-    private UUID ID;
+    private int ID;
     @NotBlank
     private String descricao;
     @NotBlank
@@ -25,11 +23,11 @@ public class tarefaCreateRequest {
         this.Prioridades = prioridades;
     }
    //Getters e setters para acessar e modificar cada valor.
-    public UUID getID() {
+    public int getID() {
         return ID;
     }
 
-    public void setID(UUID ID) {
+    public void setID(int ID) {
         this.ID = ID;
     }
 

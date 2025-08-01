@@ -1,29 +1,29 @@
 package com.example.tarefas.Gerenciador.de.Tarefas.Model;
 
+import com.example.tarefas.Gerenciador.de.Tarefas.Enums.prioridadeTarefa;
+import com.example.tarefas.Gerenciador.de.Tarefas.Enums.statusTarefa;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
-import java.util.Date;
-import java.util.UUID;
 
 @Entity
 @Table(name = "tarefas")
 public class Tarefa {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID ID;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int ID;
     private String descricao;
     private LocalDateTime DataVencimento; //para o sistema retornar a data e horario exato que a tarefa foi adicionada
     @Enumerated(EnumType.STRING)
-    private String Status;
+    private statusTarefa Status;
     @Enumerated(EnumType.STRING)
-    private String Prioridades;
+    private prioridadeTarefa Prioridades;
 
-    public UUID getID() {
+    public int getID() {
         return ID;
     }
 
-    public void setID(UUID ID) {
+    public void setID(int ID) {
         this.ID = ID;
     }
 
@@ -43,19 +43,19 @@ public class Tarefa {
         DataVencimento = dataVencimento;
     }
 
-    public String getStatus() {
+    public Enum getStatus() {
         return Status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(statusTarefa status) {
         Status = status;
     }
 
-    public String getPrioridades() {
+    public Enum getPrioridades() {
         return Prioridades;
     }
 
-    public void setPrioridades(String prioridades) {
+    public void setPrioridades(prioridadeTarefa prioridades) {
         Prioridades = prioridades;
     }
 }
