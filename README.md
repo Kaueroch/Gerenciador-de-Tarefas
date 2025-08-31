@@ -1,4 +1,6 @@
-# ✅ TaskFlow
+⚠️ **Atenção:** Este aplicativo ainda está em desenvolvimento.  
+Funcionalidades podem mudar a qualquer momento. 😉
+## ✅ TaskFlow
 Um site para **gerenciamento de tarefas** onde podemos organizar nossas anotações de forma simples e eficiente.
 
 ---
