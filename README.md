@@ -33,8 +33,11 @@ Com o **TaskFlow**, é possível planejar tarefas **da semana e do mês**, adici
 - No arquivo src/main/resources/application.properties, configure suas credenciais:
     ```properties
   spring.datasource.url=jdbc:mysql://localhost:3306/taskflow_db
-  spring.datasource.username=seu_usuario spring.datasource.password=sua_senha
-  spring.jpa.hibernate.ddl-auto=update spring.jpa.show-sql=true spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+  spring.datasource.username=seu_usuario
+   spring.datasource.password=sua_senha
+  spring.jpa.hibernate.ddl-auto=update 
+  spring.jpa.show-sql=true 
+  spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 4. **Rodar a Aplicacao**
    ```bash
    mvn spring-boot:run
