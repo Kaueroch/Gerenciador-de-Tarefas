@@ -3,7 +3,9 @@ package com.example.tarefas.Gerenciador.de.Tarefas.Model;
 import com.example.tarefas.Gerenciador.de.Tarefas.Enums.prioridadeTarefa;
 import com.example.tarefas.Gerenciador.de.Tarefas.Enums.statusTarefa;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -13,10 +15,12 @@ public class Tarefa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int ID;
     private String descricao;
-    private LocalDateTime DataVencimento; //para o sistema retornar a data e horario exato que a tarefa foi adicionada
+    private LocalDate DataRegistro; //para o sistema retornar a data e horario exato que a tarefa foi adicionada
+    private LocalDate DataVencimento;
     @Enumerated(EnumType.STRING)
     private statusTarefa Status;
     @Enumerated(EnumType.STRING)
+    @NotNull( message = "Prioridades nao pode ser null")
     private prioridadeTarefa Prioridades;
 
     public int getID() {
@@ -25,6 +29,7 @@ public class Tarefa {
 
     public void setID(int ID) {
         this.ID = ID;
+
     }
 
     public String getDescricao() {
@@ -35,11 +40,19 @@ public class Tarefa {
         this.descricao = descricao;
     }
 
-    public LocalDateTime getDataVencimento() {
+    public LocalDate getDataRegistro() {
+        return DataRegistro;
+    }
+
+    public void setDataRegistro(LocalDate dataRegistro) {
+        DataRegistro = dataRegistro;
+    }
+
+    public LocalDate getDataVencimento() {
         return DataVencimento;
     }
 
-    public void setDataVencimento(LocalDateTime dataVencimento) {
+    public void setDataVencimento(LocalDate dataVencimento) {
         DataVencimento = dataVencimento;
     }
 
