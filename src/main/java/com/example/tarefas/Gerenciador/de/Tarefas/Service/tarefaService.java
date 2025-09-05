@@ -18,14 +18,7 @@ public class tarefaService {
 
     public ResponseEntity CreateTarefa(Tarefa tarefa){
         //com Tarefa tarefa estou declarando a classe Tarefa como umna variavel para usar todas variaveis e metodos.
-        if(tarefa.getDataVencimento().isBefore(LocalDate.now())){
-            throw new ProblemsWithInputs("Por favor Coloque uma Data Valida!");
-        }else if(tarefa.getDescricao().isBlank()){
-            throw new ProblemsWithInputs("Por favor Preencha a Descricao da Tarefa");
-        }else if(tarefa.getPrioridades() == prioridadeTarefa.NENHUMA ){
-            throw new ProblemsWithInputs("Por favor Coloque Nivel de Prioridade");
-        }else
-          userRepo.save(tarefa);
+        userRepo.save(tarefa);
             return ResponseEntity.ok().body("Tarefa Adicionada ");
     }
     public ResponseEntity AtualizarTarefa(Tarefa tarefa){

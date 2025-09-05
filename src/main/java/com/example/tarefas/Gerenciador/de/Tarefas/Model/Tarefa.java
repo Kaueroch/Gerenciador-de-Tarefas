@@ -14,13 +14,16 @@ public class Tarefa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int ID;
+    @NotNull //servindo como verificaccao tanto apra o front quanto para o back
     private String descricao;
     private LocalDate DataRegistro; //para o sistema retornar a data e horario exato que a tarefa foi adicionada
+    @NotNull
     private LocalDate DataVencimento;
     @Enumerated(EnumType.STRING)
     private statusTarefa Status;
     @Enumerated(EnumType.STRING)
     @NotNull( message = "Prioridades nao pode ser null")
+    @Column(nullable = false)
     private prioridadeTarefa Prioridades;
 
     public int getID() {

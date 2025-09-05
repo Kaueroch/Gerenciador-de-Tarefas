@@ -1,5 +1,6 @@
 package com.example.tarefas.Gerenciador.de.Tarefas.Controller;
 
+import com.example.tarefas.Gerenciador.de.Tarefas.Enums.prioridadeTarefa;
 import com.example.tarefas.Gerenciador.de.Tarefas.Model.Tarefa;
 import com.example.tarefas.Gerenciador.de.Tarefas.Service.tarefaService;
 import org.springframework.beans.factory.annotation.Autowired;
