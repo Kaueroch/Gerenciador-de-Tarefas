@@ -123,7 +123,9 @@ Mas o ideal é implementar e testar direto no seu front-end React consumindo est
 - 🗂️ **Subtarefas** (quebrar tarefas grandes em partes menores)
 - 👁️ **Visualização detalhada** de cada tarefa ("clicar para expandir")
 
-### Fotos da aplicacao
+### Diagramas do banco de dados
+
+**Tarefa
 
 **Em breve...**
 
