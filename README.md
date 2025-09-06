@@ -125,7 +125,8 @@ Mas o ideal é implementar e testar direto no seu front-end React consumindo est
 
 ### Diagramas do banco de dados
 
-**Tarefa
+**Tarefa** 
+📄 [Abrir Diagrama do Banco de Dados](images/TarefaRequest.pdf)
 
 **Em breve...**
 
