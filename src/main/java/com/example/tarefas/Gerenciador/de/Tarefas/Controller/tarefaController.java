@@ -32,6 +32,4 @@ public class tarefaController {
 
        return ResponseEntity.ok("Tarefa Atualizada");
    }
-
-    //estudar metodos HTTP SPRING REST rapidinho so o basico para nao tomar muito tempo.
 }
