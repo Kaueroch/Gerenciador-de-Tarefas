@@ -108,7 +108,14 @@ Mas o ideal é implementar e testar direto no seu front-end React consumindo est
 - 🔧 **Service** → Onde fica a lógica/regra de negócio do sistema
 
 ---
-
+📌 Problemas que este projeto resolve
+ -  ❌ Falta de organização das tarefas diárias em aplicativos muito complexos.
+ -  🚀 Necessidade de uma solução leve e de fácil uso, com apenas o essencial.
+ - 🔒 Segurança no gerenciamento de tarefas (autenticação e autorização com JWT).
+ -  📊 Melhor visualização do andamento das atividades com status e prioridades.
+ - ⚡ Base sólida para estudo e aplicação de boas práticas de arquitetura com Spring Boot.
+   
+---
 ### ✨ Features Principais
 - ✅ **CRUD de Tarefas** → Criar, listar, atualizar e excluir tarefas
 - 🏷️ **Categorias e Prioridades** → Organização por status (*pendente, em andamento, concluída*) e prioridade (*baixa, média, alta*)
@@ -117,11 +124,13 @@ Mas o ideal é implementar e testar direto no seu front-end React consumindo est
 ---
 
 ### 🚀 Features Futuras
-- 🔒 **Login e Registro de Usuário** com Spring Security
-- 🔢 **Contador de tarefas** por status e progresso
-- 📧 **Notificações por e-mail** para tarefas próximas ao prazo
-- 🗂️ **Subtarefas** (quebrar tarefas grandes em partes menores)
-- 👁️ **Visualização detalhada** de cada tarefa ("clicar para expandir")
+- 🔒 Login e Registro de Usuário com Spring Security
+- 🧪 Testes unitários e de integração para garantir qualidade
+- 🐳 Containerização com Docker para fácil deploy
+- 🔁 Integração contínua (CI/CD) com GitHub Actions
+- 📧 Notificações por e-mail para tarefas próximas ao prazo
+- 🗂️ Subtarefas para dividir tarefas grandes em etapas menores
+- 👁️ Visualização detalhada de tarefas (expandir detalhes com clique)
 
 ### Diagramas do banco de dados
 
