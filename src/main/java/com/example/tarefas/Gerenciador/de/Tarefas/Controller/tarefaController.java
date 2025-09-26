@@ -29,7 +29,6 @@ public class tarefaController {
    @PutMapping("/updateStatus")
    public ResponseEntity alterarStatus(Tarefa tarefa){//alterar o status da tarefa apos clicar em concluir do usuario, dia passar do prazo ou expirando no dia
        tarefaservice.AtualizarTarefa(tarefa);
-
        return ResponseEntity.ok("Tarefa Atualizada");
    }
 }

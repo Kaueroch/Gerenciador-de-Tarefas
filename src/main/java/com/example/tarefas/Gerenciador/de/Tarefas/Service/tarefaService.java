@@ -25,7 +25,7 @@ public class tarefaService {
         tarefa.setStatus(statusTarefa.CONCLUIDA); //linhs para quando o usuario clicar em concluir
         tarefa.setDescricao(tarefa.getDescricao());
         tarefa.setDataVencimento(tarefa.getDataVencimento());
-//        tarefa.setPrioridades();
+
         tarefa.setDataRegistro(tarefa.getDataRegistro());
         userRepo.save(tarefa);
         return ResponseEntity.ok("Status alterado");
@@ -34,7 +34,6 @@ public class tarefaService {
     }
 
     public ResponseEntity Deletetarefa(Tarefa tarefa){
-
         userRepo.delete(tarefa);
         return ResponseEntity.ok("Tarefa Deletado");
     }
