@@ -16,12 +16,12 @@ public class tarefaController {
 
     @PostMapping("/create") //Request que sera chamada pelo botao adicionar do front
     public ResponseEntity createTarefa(@RequestBody  Tarefa tarefa){
-     tarefaservice.CreateTarefa(tarefa);
-     return ResponseEntity.ok("Tarefa Adicionada");
+     Tarefa tarefaCompleta = tarefaservice.CreateTarefa(tarefa);
+     return ResponseEntity.ok(tarefaCompleta);
     }
-   @DeleteMapping("/delete")
-   public ResponseEntity deleteTarefa(Tarefa tarefa){ //request que sera chamada pelo botao excluir apos o usuario clicar
-       tarefaservice.Deletetarefa(tarefa);
+   @DeleteMapping("/delete/{id}")
+   public ResponseEntity deleteTarefa(@PathVariable Long id){ //request que sera chamada pelo botao excluir apos o usuario clicar
+       tarefaservice.Deletetarefa(id);
         return ResponseEntity.ok("Tarefa Deletada");
    }
 
