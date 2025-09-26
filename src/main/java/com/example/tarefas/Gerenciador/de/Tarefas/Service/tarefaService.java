@@ -22,16 +22,10 @@ public class tarefaService {
         //com Tarefa tarefa estou declarando a classe Tarefa como umna variavel para usar todas variaveis e metodos.
         return userRepo.save(tarefa);
     }
-    public ResponseEntity AtualizarTarefa(Tarefa tarefa){
-        tarefa.setStatus(statusTarefa.CONCLUIDA); //linhs para quando o usuario clicar em concluir
-        tarefa.setDescricao(tarefa.getDescricao());
-        tarefa.setDataVencimento(tarefa.getDataVencimento());
-
-        tarefa.setDataRegistro(tarefa.getDataRegistro());
-        userRepo.save(tarefa);
-        return ResponseEntity.ok("Status alterado");
-        //como irei atualizar o campo e salvo-lo novamente, para nao acontecer do campos sairem nulos
-        // atualizo os campos com os valores atuais(getters) e tudo fica certo e resolvido.
+    //linhs para quando o usuario clicar em concluir
+    public Tarefa AtualizarTarefa(Tarefa tarefa){
+   tarefa.setStatus(statusTarefa.CONCLUIDA);
+     return userRepo.save(tarefa);
     }
 
     public ResponseEntity Deletetarefa(@PathVariable Long id){
