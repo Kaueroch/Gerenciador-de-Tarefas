@@ -1,17 +1,18 @@
 package com.example.tarefas.Gerenciador.de.Tarefas.Model;
 
+
+import com.example.tarefas.Gerenciador.de.Tarefas.Enums.UserRoles;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
-
 import java.util.UUID;
 //REPRESENTA NOSSA TABELA NO CAMPO, entao nao faz sentido colocar as validacoes aqui.
 // Somente as especificacoes da COLUNA.
 @Entity
-@Table(name = "usuario")
-public class Usuario {
+@Table(name = "usuario_autenticados")
+public class Usuario{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int Id;
+    private Long Id;
     @org.hibernate.validator.constraints.UUID
     @Column(unique = true, nullable = false)
     private UUID public_ID;
@@ -19,15 +20,25 @@ public class Usuario {
     @Column(unique = true,nullable = false)
     private String Username;
     @Column(unique = true,nullable = false)
+    @Email
     private String Email;
     private String password;
     private String confirm_Password;
+    private UserRoles userRoles;
 
-    public int getId() {
+    public UserRoles getRoles() {
+        return userRoles;
+    }
+
+    public void setRoles(UserRoles roles) {
+        this.userRoles = roles;
+    }
+
+    public Long getId() {
         return Id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         Id = id;
     }
 

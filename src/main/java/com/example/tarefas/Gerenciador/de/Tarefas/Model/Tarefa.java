@@ -24,7 +24,6 @@ public class Tarefa {
     @NotNull( message = "Prioridades nao pode ser null")
     @Column(nullable = false)
     private prioridadeTarefa Prioridades;
-
     public int getId() {
         return id;
     }
