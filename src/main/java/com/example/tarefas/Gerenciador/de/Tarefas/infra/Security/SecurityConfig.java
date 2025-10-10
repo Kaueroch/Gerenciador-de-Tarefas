@@ -32,4 +32,5 @@ public class SecurityConfig {
                         //como no meu caso nao tenho utilidade para isso ainda,irei deixar comentado,mas irei anotar para aprender.
                 .build();
     }
+
 }

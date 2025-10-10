@@ -18,7 +18,7 @@ public class Usuario{
     private UUID public_ID;
     private String Name;
     @Column(unique = true,nullable = false)
-    private String Username;
+    private String username; // o erro apenas era que o spring nao estava achando o Username maiusculo, entao coloquei minusculo que era como ele esperava e funcionou.
     @Column(unique = true,nullable = false)
     @Email
     private String Email;
@@ -59,11 +59,11 @@ public class Usuario{
     }
 
     public String getUsername() {
-        return Username;
+        return username;
     }
 
     public void setUsername(String username) {
-        Username = username;
+        this.username = username;
     }
 
     public String getEmail() {
